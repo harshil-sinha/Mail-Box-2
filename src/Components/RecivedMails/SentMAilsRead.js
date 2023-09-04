@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import {  useSelector } from "react-redux";
 
 import classes  from './Rec.module.css';
-
+import Mailbox from './Mailbox';
 
 const ReadSent = () => {
     const {id}=useParams();
@@ -21,6 +21,7 @@ const ReadSent = () => {
     
   return (
     <Fragment>
+    <Mailbox/>
     <div className={classes.wrapper1}> 
     <div className={classes.wrapper}> 
     
