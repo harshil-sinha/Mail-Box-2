@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import Welcome from '../MailComponents/Welcome';
+// import Welcome from '../MailComponents/Welcome';
 import classes from './sent.module.css'
-
+import Mailbox from './Mailbox';
 import { inboxActions } from '../Redux/Inbox';
 import axios from 'axios';
 
@@ -40,29 +40,33 @@ const SentBox = () => {
     console.log(data,'data');
   return (
     <div  >
-    <Welcome />
+    {/* <Welcome /> */}
+    <Mailbox/>
        {
-  <div className={classes.wrapper1}>
-  <div className={classes.wrapper}>
+          <div className={classes.wrapper1}>
+          <div className={classes.wrapper}>
 
-  <div className={classes.input}>
-    <p className={classes.p}>Sent-Box</p>
+          <div className={classes.input}>
+            <p className={classes.p}>Sent-Box</p>
             {
 
                 mailInInbox.map((item)=>(
-                 <NavLink to={`/Sent/${item.id}`}>   <li className={classes.input} key={item.id}>
+                 <NavLink to={`/Sent/${item.id}`}>
+                    <li className={classes.input} key={item.id}>
                     <span className={classes.span}>To :- {item.to}</span>
-            <span className={classes.span} >{item.subject}</span>
-            <span className={classes.span}>
-                message
-            </span>
-          
-            </li></NavLink>
+                    <span className={classes.span} >{item.subject}</span>
+                    <span className={classes.span}>
+                        message
+                    </span>
+                    </li>
+                 </NavLink>
                 ))
 
             }
             </div>
-        </div></div>}
+            </div>
+            </div>
+        }
         
     </div>
   )
