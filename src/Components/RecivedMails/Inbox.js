@@ -8,6 +8,8 @@ import { inboxActions } from "../Redux/Inbox";
 import Rec from "./Rec";
 import Welcome from "../MailComponents/Welcome";
 
+import Mailbox from './Mailbox';
+
 
 const ReceiveEmails = () => {
   const[md,setMd]=useState([]);
@@ -94,7 +96,8 @@ useEffect(()=>{
 
   return (
     <>
-    <Welcome />
+    {/* <Welcome /> */}
+    <Mailbox/>
    
     <div className={classes.wrapper1}>
     <div className={classes.wrapper}> 
