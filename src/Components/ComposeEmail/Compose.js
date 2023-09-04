@@ -6,6 +6,7 @@ import classes from './Compose.module.css';
 import { useSelector } from "react-redux";
 import Welcome from "../MailComponents/Welcome";
 import useFetch from "../RecivedMails/Custom";
+import Mailbox from "../RecivedMails/Mailbox"
 
 const ComposeMail = () => {
   const Toref = useRef();
@@ -74,7 +75,8 @@ const ComposeMail = () => {
   return (<>
 
  
-   <Welcome />
+   {/* <Welcome /> */}
+   <Mailbox/>
 
      <div className={classes.wrapper1} >
            <div className={classes.wrapper}>
