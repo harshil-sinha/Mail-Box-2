@@ -25,9 +25,10 @@ const Welcome=()=>{
     return(
     <div className={classes.wrapper1}> 
     <nav className={classes.wrapper}> 
-    <p >Welcome ...!</p>
-    <p className={classes.link}><Link to='/Mailbox'> Mailbox</Link></p>
-    <button className={classes.button} onClick={LogoutHandler}>  Logout</button></nav>
+    <p style={{marginTop:"13px", color:"white"}}> 📫 Mail Box </p>
+    <p className={classes.link}><Link to='/Mailbox' style={{color:"white"}}> Mailbox</Link></p>
+    <button className={classes.button} onClick={LogoutHandler}>  Logout</button>
+    </nav>
    
     </div>)
 }
